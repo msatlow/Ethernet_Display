@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 26 0
+LIBS:Ethernet_Display-cache
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -368,4 +369,51 @@ Wire Wire Line
 Connection ~ 2100 4500
 Wire Wire Line
 	2100 4500 2100 4700
+$Comp
+L Device:LED LED1
+U 1 1 5DD7FF3C
+P 5150 2150
+F 0 "LED1" H 5143 1895 50  0000 C CNN
+F 1 "LED" H 5143 1986 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z2.0mm" H 5150 2150 50  0001 C CNN
+F 3 "~" H 5150 2150 50  0001 C CNN
+	1    5150 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DD83C11
+P 5650 2300
+F 0 "R2" H 5720 2346 50  0000 L CNN
+F 1 "100" H 5720 2255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 5580 2300 50  0001 C CNN
+F 3 "~" H 5650 2300 50  0001 C CNN
+	1    5650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5DD84B2D
+P 5650 2550
+F 0 "#PWR0111" H 5650 2300 50  0001 C CNN
+F 1 "GND" H 5655 2377 50  0000 C CNN
+F 2 "" H 5650 2550 50  0001 C CNN
+F 3 "" H 5650 2550 50  0001 C CNN
+	1    5650 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2600 5650 2550
+Connection ~ 5650 2550
+Wire Wire Line
+	5650 2550 5650 2450
+Connection ~ 5650 2450
+Wire Wire Line
+	5650 2450 5650 2350
+Wire Wire Line
+	5300 2150 5650 2150
+Text GLabel 4800 2150 0    50   Input ~ 0
+D9
+Wire Wire Line
+	4800 2150 5000 2150
 $EndSCHEMATC
